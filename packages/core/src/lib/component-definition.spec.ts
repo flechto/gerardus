@@ -1,7 +1,7 @@
 import {expect, it} from "vitest";
 import {createMap} from "./create-map";
 import {defineMap} from "./define-map";
-import {Lookup} from "./lookup";
+import mockFieldFinderFactory from "./__testing__/mock-field-finder-factory";
 
 it('works', () => {
 
@@ -19,11 +19,7 @@ it('works', () => {
         }
     });
 
-    const map = createMap(def, {
-        getByLabel(lookup) {
-            return () => [lookup.selector + ' YAYA', lookup.value + ' AYAY']
-        }
-    });
+    const map = createMap(def, mockFieldFinderFactory);
 
-    expect(map.getNameField()).toEqual(['by-label YAYA', 'name AYAY']);
+    expect(map.getNameField()).toEqual(['get-by-label', 'name']);
 });
