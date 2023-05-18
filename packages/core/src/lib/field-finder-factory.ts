@@ -8,4 +8,5 @@ export interface FieldFinderFactory<
     getByLabel: GetFinder<ElementType>;
     getByText: GetFinder<ElementType>;
     getByRole: GetFinder<ElementType>;
+    getByTestId: GetFinder<ElementType>;
 }

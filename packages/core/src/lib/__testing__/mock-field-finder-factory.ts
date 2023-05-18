@@ -9,6 +9,9 @@ const mockFieldFinderFactory: FieldFinderFactory<[string, string]> = {
     },
     getByRole({value}) {
         return () => ['get-by-role', value]
+    },
+    getByTestId({value}) {
+        return () => ['get-by-testid', value]
     }
 }
 export default mockFieldFinderFactory;

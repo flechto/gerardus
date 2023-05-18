@@ -14,7 +14,7 @@ function getFinder<ElementType>(finder: FieldFinderFactory<ElementType>, lookup:
         case "by-role":
             return finder.getByRole(lookup);
         case "by-testid":
-            break;
+            return finder.getByTestId(lookup)
     }
 
     throw new Error(`Unknown Selector ${lookup.selector}`)

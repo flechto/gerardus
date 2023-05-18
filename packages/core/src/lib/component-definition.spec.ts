@@ -17,6 +17,10 @@ it('works', () => {
         byRoleField: {
             selector: "by-role",
             value: 'buttom'
+        },
+        byTestIdField: {
+            selector: 'by-testid',
+            value: 'id this'
         }
     });
 
@@ -25,4 +29,5 @@ it('works', () => {
     expect(map.getByLabelField()).toEqual(['get-by-label', 'name']);
     expect(map.getByTextField()).toEqual(['get-by-text', 'text']);
     expect(map.getByRoleField()).toEqual(['get-by-role', 'buttom']);
+    expect(map.getByTestIdField()).toEqual(['get-by-testid', 'id this']);
 });
