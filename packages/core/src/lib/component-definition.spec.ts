@@ -13,17 +13,10 @@ it('works', () => {
         byTextField: {
             selector: 'by-text',
             value: 'text'
-        }
-    });
-
-    expect(def).toEqual({
-        byLabelField: {
-            selector: "by-label",
-            value: 'name'
         },
-        byTextField: {
-            selector: 'by-text',
-            value: 'text'
+        byRoleField: {
+            selector: "by-role",
+            value: 'buttom'
         }
     });
 
@@ -31,4 +24,5 @@ it('works', () => {
 
     expect(map.getByLabelField()).toEqual(['get-by-label', 'name']);
     expect(map.getByTextField()).toEqual(['get-by-text', 'text']);
+    expect(map.getByRoleField()).toEqual(['get-by-role', 'buttom']);
 });

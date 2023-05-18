@@ -1,6 +1,4 @@
-import {vi} from "vitest";
 import {FieldFinderFactory} from "../field-finder-factory";
-import {Lookup} from "../lookup";
 
 const mockFieldFinderFactory: FieldFinderFactory<[string, string]> = {
     getByLabel({value}) {
@@ -8,6 +6,9 @@ const mockFieldFinderFactory: FieldFinderFactory<[string, string]> = {
     },
     getByText({value}) {
         return () => ['get-by-text', value]
+    },
+    getByRole({value}) {
+        return () => ['get-by-role', value]
     }
 }
 export default mockFieldFinderFactory;

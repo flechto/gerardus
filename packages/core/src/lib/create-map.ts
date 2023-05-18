@@ -10,9 +10,9 @@ function getFinder<ElementType>(finder: FieldFinderFactory<ElementType>, lookup:
         case "by-label":
             return finder.getByLabel(lookup);
         case "by-text":
-            return finder.getByText(lookup)
+            return finder.getByText(lookup);
         case "by-role":
-            break;
+            return finder.getByRole(lookup);
         case "by-testid":
             break;
     }
