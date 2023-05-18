@@ -1,6 +1,7 @@
 import {expect, it} from "vitest";
 import {createMap} from "./create-map";
 import {defineMap} from "./define-map";
+import {Lookup} from "./lookup";
 
 it('works', () => {
 
@@ -18,7 +19,11 @@ it('works', () => {
         }
     });
 
-    const map = createMap(def);
+    const map = createMap(def, {
+        getByLabel(lookup) {
+            return () => [lookup.selector + ' YAYA', lookup.value + ' AYAY']
+        }
+    });
 
-    expect(map.getNameField()).toBe(1);
+    expect(map.getNameField()).toEqual(['by-label YAYA', 'name AYAY']);
 });
