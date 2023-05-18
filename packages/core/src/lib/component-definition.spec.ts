@@ -6,14 +6,14 @@ import mockFieldFinderFactory from "./__testing__/mock-field-finder-factory";
 it('works', () => {
 
     const def = defineMap({
-        nameField: {
+        byLabelField: {
             selector: "by-label",
             value: 'name'
         }
     });
 
     expect(def).toEqual({
-        nameField: {
+        byLabelField: {
             selector: "by-label",
             value: 'name'
         }
@@ -21,5 +21,5 @@ it('works', () => {
 
     const map = createMap(def, mockFieldFinderFactory);
 
-    expect(map.getNameField()).toEqual(['get-by-label', 'name']);
+    expect(map.getByLabelField()).toEqual(['get-by-label', 'name']);
 });
