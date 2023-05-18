@@ -1,5 +1,6 @@
-import {createMap, defineMap} from "./component-definition";
 import {expect, it} from "vitest";
+import {createMap} from "./create-map";
+import {defineMap} from "./define-map";
 
 it('works', () => {
 
