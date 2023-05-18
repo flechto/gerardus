@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3ea27fb-e3c9-4537-b323-a0beaf195ad8" name="Changes" comment="extracted types and functions">
-      <change afterPath="$PROJECT_DIR$/packages/core/src/lib/field-finder-factory.ts" afterDir="false" />
+    <list default="true" id="b3ea27fb-e3c9-4537-b323-a0beaf195ad8" name="Changes" comment="cleaned up mock">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/src/lib/__testing__/mock-field-finder-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/lib/__testing__/mock-field-finder-factory.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/core/src/lib/component-definition.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/lib/component-definition.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/core/src/lib/create-map.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/lib/create-map.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/src/lib/field-finder-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/lib/field-finder-factory.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +93,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684386147923</updated>
-      <workItem from="1684386150278" duration="2543000" />
+      <workItem from="1684386150278" duration="3722000" />
     </task>
     <task id="LOCAL-00001" summary="basic work flow">
       <created>1684387878025</created>
@@ -108,7 +109,35 @@
       <option name="project" value="LOCAL" />
       <updated>1684388083649</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="created and consumed field-finder-factory.ts in create-map.ts">
+      <created>1684388756773</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684388756773</updated>
+    </task>
+    <task id="LOCAL-00004" summary="implemented mock-field-finder-factory.ts">
+      <created>1684389241063</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684389241063</updated>
+    </task>
+    <task id="LOCAL-00005" summary="renamed test by label">
+      <created>1684389311673</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684389311673</updated>
+    </task>
+    <task id="LOCAL-00006" summary="cleaned up mock">
+      <created>1684389499726</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684389499726</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +146,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="basic work flow" />
     <MESSAGE value="extracted types and functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="extracted types and functions" />
+    <MESSAGE value="created and consumed field-finder-factory.ts in create-map.ts" />
+    <MESSAGE value="implemented mock-field-finder-factory.ts" />
+    <MESSAGE value="renamed test by label" />
+    <MESSAGE value="cleaned up mock" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaned up mock" />
   </component>
 </project>

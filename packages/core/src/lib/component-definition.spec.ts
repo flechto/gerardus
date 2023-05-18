@@ -9,6 +9,10 @@ it('works', () => {
         byLabelField: {
             selector: "by-label",
             value: 'name'
+        },
+        byTextField: {
+            selector: 'by-text',
+            value: 'text'
         }
     });
 
@@ -16,10 +20,15 @@ it('works', () => {
         byLabelField: {
             selector: "by-label",
             value: 'name'
+        },
+        byTextField: {
+            selector: 'by-text',
+            value: 'text'
         }
     });
 
     const map = createMap(def, mockFieldFinderFactory);
 
     expect(map.getByLabelField()).toEqual(['get-by-label', 'name']);
+    expect(map.getByTextField()).toEqual(['get-by-text', 'text']);
 });
