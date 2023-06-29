@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@gerardus/core": ["packages/core/src/index.ts"]
+      "@gerardus/core": ["packages/core/src/index.ts"],
+      "@gerardus/react-testing-library": [
+        "packages/react-testing-library/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
