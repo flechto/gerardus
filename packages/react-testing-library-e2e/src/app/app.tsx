@@ -1,7 +1,7 @@
 export function App() {
   return (
     <div>
-      <input aria-label={'Labeled By Target'} value={'Labeled'}/>
+      <input aria-label={'By Label Target'} defaultValue={'Labeled'}/>
       <div>
         By Text Target
       </div>

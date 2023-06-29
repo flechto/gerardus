@@ -1,15 +1,68 @@
-import { render } from '@testing-library/react';
+import { render, screen } from "@testing-library/react";
 
-import App from './app';
+import App from "./app";
+import { createMap, defineMap, FieldFinderFactory, Lookup } from "@gerardus/core";
+import { expect, describe, it } from "vitest";
 
-describe('App', () => {
-  it('should render successfully', () => {
-    const { baseElement } = render(<App />);
-    expect(baseElement).toBeTruthy();
+const AppMap = defineMap({
+  byLabel: {
+    selector: "by-label",
+    value: "By Label Target"
+  },
+  byText: {
+    selector: 'by-text',
+    value: 'By Text Target'
+  },
+  byRole: {
+    selector: 'by-role',
+    value: 'button'
+  },
+  byTestId: {
+    selector: 'by-testid',
+    value: 'test-id'
+  }
+});
+
+const ReactFieldFinder: FieldFinderFactory<HTMLElement> = {
+  getByLabel({ value }: Readonly<Lookup>): () => HTMLElement {
+    return function() {
+      return screen.getByLabelText(value);
+    };
+  }, getByRole({ value }: Readonly<Lookup>): () => HTMLElement {
+    return function() {
+      return screen.getByRole(value);
+    };
+  }, getByTestId({ value }: Readonly<Lookup>): () => HTMLElement {
+    return function() {
+      return screen.getByTestId(value);
+    };
+  }, getByText({ value }: Readonly<Lookup>): () => HTMLElement {
+    return function() {
+      return screen.getByText(value);
+    };
+  }
+
+};
+const page = createMap(AppMap, ReactFieldFinder);
+
+describe("App", () => {
+  it("get by label text", () => {
+    render(<App />);
+    expect(page.getByLabel()).toHaveProperty('value', 'Labeled')
   });
 
-  it('should have a greeting as the title', () => {
-    const { getByText } = render(<App />);
-    expect(getByText(/Welcome react-testing-library-e2e/gi)).toBeTruthy();
+  it("get by text", () => {
+    render(<App />);
+    expect(page.getByText()).toHaveProperty('textContent', 'By Text Target')
+  });
+
+  it("get by role", () => {
+    render(<App />);
+    expect(page.getByRole()).toHaveProperty('textContent', 'By Role Target')
+  });
+
+  it("get by test id", () => {
+    render(<App />);
+    expect(page.getByTestId()).toHaveProperty('textContent', 'Test Id Target')
   });
 });
