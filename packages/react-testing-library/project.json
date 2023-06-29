@@ -1,0 +1,35 @@
+{
+  "name": "react-testing-library",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/react-testing-library/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/react-testing-library"
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs react-testing-library {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["coverage/packages/react-testing-library"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/packages/react-testing-library"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/react-testing-library/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,80 @@
+{
+  "name": "react-testing-library-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/react-testing-library-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/packages/react-testing-library-e2e"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "react-testing-library-e2e:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "react-testing-library-e2e:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "react-testing-library-e2e:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "preview": {
+      "executor": "@nx/vite:preview-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "react-testing-library-e2e:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "react-testing-library-e2e:build:development"
+        },
+        "production": {
+          "buildTarget": "react-testing-library-e2e:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["coverage/packages/react-testing-library-e2e"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/packages/react-testing-library-e2e"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "packages/react-testing-library-e2e/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "react-testing-library-e2e:build"
+      }
+    }
+  },
+  "tags": []
+}
