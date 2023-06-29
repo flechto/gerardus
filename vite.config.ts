@@ -7,11 +7,11 @@ import * as path from "path";
 export default defineConfig({
   cacheDir: './node_modules/.vite/react-testing-library-e2e',
 
-  // resolve: {
-  //   alias: {
-  //     '@gerardus/core': 'packages/core/src/index.ts'
-  //   }
-  // },
+  resolve: {
+    alias: {
+      '@gerardus/core': path.resolve(__dirname, './packages/core/src')
+    }
+  },
 
   plugins: [
     react(),
