@@ -1,5 +1,5 @@
-import ReactFieldFinder from "./lib/react-form-field-finder";
+import createReactMap from "./lib/create-react-map";
 
 export {
-  ReactFieldFinder
+  createReactMap,
 }

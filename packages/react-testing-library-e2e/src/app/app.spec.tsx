@@ -1,9 +1,9 @@
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 
 import App from "./app";
-import { createMap, defineMap, FieldFinderFactory, Lookup } from "@gerardus/core";
-import { expect, describe, it } from "vitest";
-import { ReactFieldFinder } from "@gerardus/react-testing-library";
+import { defineMap } from "@gerardus/core";
+import { describe, expect, it } from "vitest";
+import { createReactMap } from "@gerardus/react-testing-library";
 
 const AppMap = defineMap({
   byLabel: {
@@ -25,7 +25,7 @@ const AppMap = defineMap({
 });
 
 
-const page = createMap(AppMap, ReactFieldFinder);
+const page = createReactMap(AppMap);
 
 describe("App", () => {
   it("get by label text", () => {
