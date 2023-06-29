@@ -3,6 +3,7 @@ import { render, screen } from "@testing-library/react";
 import App from "./app";
 import { createMap, defineMap, FieldFinderFactory, Lookup } from "@gerardus/core";
 import { expect, describe, it } from "vitest";
+import { ReactFieldFinder } from "@gerardus/react-testing-library";
 
 const AppMap = defineMap({
   byLabel: {
@@ -23,26 +24,7 @@ const AppMap = defineMap({
   }
 });
 
-const ReactFieldFinder: FieldFinderFactory<HTMLElement> = {
-  getByLabel({ value }: Readonly<Lookup>): () => HTMLElement {
-    return function() {
-      return screen.getByLabelText(value);
-    };
-  }, getByRole({ value }: Readonly<Lookup>): () => HTMLElement {
-    return function() {
-      return screen.getByRole(value);
-    };
-  }, getByTestId({ value }: Readonly<Lookup>): () => HTMLElement {
-    return function() {
-      return screen.getByTestId(value);
-    };
-  }, getByText({ value }: Readonly<Lookup>): () => HTMLElement {
-    return function() {
-      return screen.getByText(value);
-    };
-  }
 
-};
 const page = createMap(AppMap, ReactFieldFinder);
 
 describe("App", () => {

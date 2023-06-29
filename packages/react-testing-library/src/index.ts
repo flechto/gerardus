@@ -1,1 +1,5 @@
-export * from './lib/react-testing-library';
+import ReactFieldFinder from "./lib/react-form-field-finder";
+
+export {
+  ReactFieldFinder
+}

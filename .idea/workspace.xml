@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3ea27fb-e3c9-4537-b323-a0beaf195ad8" name="Changes" comment="implemented simple test page for e2e">
+    <list default="true" id="b3ea27fb-e3c9-4537-b323-a0beaf195ad8" name="Changes" comment="added spec for finder">
+      <change afterPath="$PROJECT_DIR$/packages/react-testing-library/src/lib/react-form-field-finder.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/react-testing-library-e2e/src/app/app.spec.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react-testing-library-e2e/src/app/app.spec.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/react-testing-library/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react-testing-library/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +66,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="npm.nx serve react-testing-library-e2e">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Vitest.All Tests">
     <configuration name="All Tests" type="JavaScriptTestRunnerVitest" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
@@ -199,7 +207,39 @@
       <option name="project" value="LOCAL" />
       <updated>1688010394211</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added exports to core">
+      <option name="closed" value="true" />
+      <created>1688010500520</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1688010500520</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fixed react-testing-library.spec.ts">
+      <option name="closed" value="true" />
+      <created>1688012742626</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1688012742626</updated>
+    </task>
+    <task id="LOCAL-00014" summary="created global vite config with alias for core">
+      <option name="closed" value="true" />
+      <created>1688013726020</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1688013726020</updated>
+    </task>
+    <task id="LOCAL-00015" summary="added spec for finder">
+      <option name="closed" value="true" />
+      <created>1688014075452</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1688014075452</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +258,10 @@
     <MESSAGE value="added get by testid" />
     <MESSAGE value="added e2e for react-testing-library" />
     <MESSAGE value="implemented simple test page for e2e" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented simple test page for e2e" />
+    <MESSAGE value="added exports to core" />
+    <MESSAGE value="fixed react-testing-library.spec.ts" />
+    <MESSAGE value="created global vite config with alias for core" />
+    <MESSAGE value="added spec for finder" />
+    <option name="LAST_COMMIT_MESSAGE" value="added spec for finder" />
   </component>
 </project>
