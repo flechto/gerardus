@@ -7,11 +7,11 @@ import * as path from "path";
 export default defineConfig({
   cacheDir: './node_modules/.vite/react-testing-library-e2e',
 
-  resolve: {
-    alias: {
-      '@gerardus/core': 'packages/core/src/index.ts'
-    }
-  },
+  // resolve: {
+  //   alias: {
+  //     '@gerardus/core': 'packages/core/src/index.ts'
+  //   }
+  // },
 
   plugins: [
     react(),
@@ -32,7 +32,7 @@ export default defineConfig({
   test: {
     globals: true,
     cache: {
-      dir: '../../node_modules/.vitest',
+      dir: './node_modules/.vitest',
     },
     environment: 'jsdom',
     include: ['**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
