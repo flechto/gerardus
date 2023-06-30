@@ -5,10 +5,13 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nx/vite:build",
+      "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/packages/react-testing-library"
+        "outputPath": "dist/packages/react-testing-library",
+        "main": "packages/react-testing-library/src/lib/index.ts",
+        "tsConfig": "packages/react-testing-library/tsconfig.lib.json",
+        "assets": ["package/react-testing-library/*.md"]
       }
     },
     "publish": {

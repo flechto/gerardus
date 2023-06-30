@@ -5,10 +5,13 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nx/vite:build",
+      "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/packages/core"
+        "outputPath": "dist/packages/core",
+        "main": "packages/core/src/lib/index.ts",
+        "tsConfig": "packages/core/tsconfig.lib.json",
+        "assets": ["package/core/*.md"]
       }
     },
     "publish": {
