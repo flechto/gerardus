@@ -11,6 +11,10 @@
         "outputPath": "dist/packages/core"
       }
     },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs core {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
     "test": {
       "executor": "@nx/vite:test",
       "outputs": ["coverage/packages/core"],
