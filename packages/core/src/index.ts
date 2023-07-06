@@ -9,6 +9,9 @@ export {
   createMap,
   defineMap,
 
+}
+
+export type {
   FieldFinderFactory,
   Lookup,
   ComponentMap,

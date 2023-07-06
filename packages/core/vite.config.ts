@@ -1,12 +1,10 @@
 /// <reference types="vitest" />
-import { defineConfig } from 'vite';
-
-import viteTsConfigPaths from 'vite-tsconfig-paths';
+import {mergeConfig} from 'vite';
 import dts from 'vite-plugin-dts';
-import { joinPathFragments } from '@nx/devkit';
+import {joinPathFragments} from '@nx/devkit';
+import defaultConfig from '../../vite.config';
 
-export default defineConfig({
-  cacheDir: '../../node_modules/.vite/core',
+export default mergeConfig(defaultConfig, {
 
   plugins: [
     dts({
@@ -15,9 +13,9 @@ export default defineConfig({
       skipDiagnostics: true,
     }),
 
-    viteTsConfigPaths({
-      root: '../../',
-    }),
+    // viteTsConfigPaths({
+    //   root: '../../',
+    // }),
   ],
 
   // Uncomment this if you are using workers.
